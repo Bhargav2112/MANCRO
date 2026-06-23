@@ -1,0 +1,57 @@
+{
+  "name": "StoreSettings",
+  "type": "object",
+  "properties": {
+    "store_name": {
+      "type": "string",
+      "description": "Store name"
+    },
+    "store_email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "store_phone": {
+      "type": "string",
+      "description": "Contact phone"
+    },
+    "whatsapp_number": {
+      "type": "string",
+      "description": "WhatsApp number"
+    },
+    "store_address": {
+      "type": "string",
+      "description": "Store address"
+    },
+    "instagram_url": {
+      "type": "string",
+      "description": "Instagram URL"
+    },
+    "facebook_url": {
+      "type": "string",
+      "description": "Facebook URL"
+    },
+    "twitter_url": {
+      "type": "string",
+      "description": "Twitter/X URL"
+    },
+    "youtube_url": {
+      "type": "string",
+      "description": "YouTube URL"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Store logo URL"
+    },
+    "banner_url": {
+      "type": "string",
+      "description": "Store banner URL"
+    },
+    "about_text": {
+      "type": "string",
+      "description": "About the store"
+    }
+  },
+  "required": [
+    "store_name"
+  ]
+}

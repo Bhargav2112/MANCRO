@@ -1,0 +1,96 @@
+{
+  "name": "Watch",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Watch name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "SEO-friendly product slug"
+    },
+    "caliber_id": {
+      "type": "string",
+      "description": "Collection or caliber identifier for clean URLs"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Heritage",
+        "Sport",
+        "Dress",
+        "Skeleton",
+        "Limited"
+      ],
+      "default": "Heritage"
+    },
+    "price": {
+      "type": "number",
+      "description": "Product price"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Product gallery images"
+    },
+    "movement": {
+      "type": "string"
+    },
+    "case_size": {
+      "type": "string"
+    },
+    "case_material": {
+      "type": "string"
+    },
+    "water_resistance": {
+      "type": "string"
+    },
+    "power_reserve": {
+      "type": "string"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stock_status": {
+      "type": "string",
+      "enum": [
+        "In Stock",
+        "Limited",
+        "Made to Order",
+        "Sold Out"
+      ],
+      "default": "In Stock"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_new_arrival": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_best_seller": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "caliber_id",
+    "price"
+  ]
+}

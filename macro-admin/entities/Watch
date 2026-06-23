@@ -1,0 +1,140 @@
+{
+  "name": "Watch",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Watch name"
+    },
+    "model_number": {
+      "type": "string",
+      "description": "Model number"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Luxury",
+        "Sport",
+        "Classic",
+        "Dress",
+        "Dive",
+        "Chronograph",
+        "Smart",
+        "Limited Edition"
+      ],
+      "description": "Watch category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Regular price"
+    },
+    "discount_price": {
+      "type": "number",
+      "description": "Discounted price"
+    },
+    "stock_quantity": {
+      "type": "number",
+      "description": "Current stock quantity"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "features": {
+      "type": "string",
+      "description": "Product features"
+    },
+    "specifications": {
+      "type": "string",
+      "description": "Technical specifications"
+    },
+    "movement_type": {
+      "type": "string",
+      "enum": [
+        "Automatic",
+        "Quartz",
+        "Mechanical",
+        "Solar",
+        "Kinetic"
+      ],
+      "description": "Movement type"
+    },
+    "case_material": {
+      "type": "string",
+      "enum": [
+        "Stainless Steel",
+        "Titanium",
+        "Gold",
+        "Rose Gold",
+        "Ceramic",
+        "Carbon Fiber",
+        "Platinum"
+      ],
+      "description": "Case material"
+    },
+    "strap_material": {
+      "type": "string",
+      "enum": [
+        "Leather",
+        "Stainless Steel",
+        "Rubber",
+        "NATO",
+        "Mesh",
+        "Ceramic",
+        "Titanium"
+      ],
+      "description": "Strap material"
+    },
+    "water_resistance": {
+      "type": "string",
+      "description": "Water resistance rating"
+    },
+    "warranty": {
+      "type": "string",
+      "description": "Warranty period"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "description": "Featured product"
+    },
+    "is_new_arrival": {
+      "type": "boolean",
+      "description": "New arrival"
+    },
+    "is_best_seller": {
+      "type": "boolean",
+      "description": "Best seller"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Hidden"
+      ],
+      "description": "Product status"
+    },
+    "images": {
+      "type": "array",
+      "description": "Product images",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "stock_quantity",
+    "sku",
+    "category",
+    "status"
+  ]
+}
