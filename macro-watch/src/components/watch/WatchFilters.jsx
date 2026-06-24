@@ -27,9 +27,9 @@ export default function WatchFilters({ filters, setFilters }) {
         <SelectTrigger className="h-12 rounded-full bg-background"><SelectValue placeholder="Price" /></SelectTrigger>
         <SelectContent>
           <SelectItem value="all">All Prices</SelectItem>
-          <SelectItem value="under5000">Under $5,000</SelectItem>
-          <SelectItem value="5000to10000">$5,000 — $10,000</SelectItem>
-          <SelectItem value="over10000">Above $10,000</SelectItem>
+          <SelectItem value="under5000">Under ₹5,000</SelectItem>
+          <SelectItem value="5000to10000">₹5,000 — ₹10,000</SelectItem>
+          <SelectItem value="over10000">Above ₹10,000</SelectItem>
         </SelectContent>
       </Select>
       <Select value={filters.sort} onValueChange={(value) => update('sort', value)}>

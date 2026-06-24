@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 import PageShell from '@/components/layout/PageShell';
@@ -8,8 +9,23 @@ import WatchGrid from '@/components/watch/WatchGrid';
 import { setSeo } from '@/lib/seo';
 
 export default function Collection() {
-  useEffect(() => setSeo({ title: 'MANCRO Collection | Luxury Watch Vault', description: 'Explore MANCRO luxury watches with dynamic search, filters and clean product URLs.' }), []);
+  const location = useLocation();
+  
+  useEffect(() => {
+    setSeo({ 
+      title: 'MANCRO Collection | Luxury Watch Vault', 
+      description: 'Explore MANCRO luxury watches with dynamic search, filters and clean product URLs.' 
+    });
+  }, []);
+
   const [filters, setFilters] = useState({ search: '', category: 'all', price: 'all', sort: 'featured' });
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const cat = queryParams.get('category') || 'all';
+    setFilters((prev) => ({ ...prev, category: cat }));
+  }, [location.search]);
+
   const { data: watches = [], isLoading } = useQuery({ queryKey: ['watches'], queryFn: () => base44.entities.Watch.list('-created_date') });
 
   const filtered = useMemo(() => {
