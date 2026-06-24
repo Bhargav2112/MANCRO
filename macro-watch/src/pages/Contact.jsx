@@ -65,8 +65,8 @@ export default function Contact() {
 
   return (
     <PageShell>
-      <main className="px-6 pb-24 pt-36">
-        <section className="mx-auto max-w-7xl">
+      <main className="pb-20 pt-36">
+        <section className="mx-auto max-w-7xl px-6">
           <SectionHeader
             eyebrow="Direct Inquiry"
             title="Speak with the Atelier"
@@ -237,6 +237,19 @@ export default function Contact() {
           </div>
         </section>
       </main>
+
+      {/* Atelier Location Map */}
+      <div className="w-full h-[600px] border-t border-b border-border/30 bg-zinc-950/60 overflow-hidden relative">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9192737903513!2d72.8704574!3d21.2350495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f004fe7ca07%3A0x61c965e267fd5dca!2sAR+Mall!5e0!3m2!1sen!2sin!4v1624442654310!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(1) contrast(1.2)" }} 
+          allowFullScreen="" 
+          loading="lazy"
+          title="MANCRO Atelier Location"
+        ></iframe>
+      </div>
     </PageShell>
   );
 }

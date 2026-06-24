@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldAlert, Award, RotateCcw, Truck, Smartphone, AppWindow } from 'lucide-react';
+import { ShieldAlert, Award, RotateCcw, Truck, Instagram } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { base44 } from '@/api/base44Client';
 
@@ -72,15 +72,17 @@ export default function Footer() {
             <p className="font-sans text-sm leading-8 text-muted-foreground/80 max-w-sm font-light">
               We are dedicated to crafting premium watches that combine timeless design, chronometer-grade precision, and micro-mechanical purity.
             </p>
-            {/* App Store Badges */}
+            {/* Social Media Links */}
             <div className="space-y-3 pt-2">
-              <h4 className="text-[10px] uppercase font-mono tracking-widest text-primary">Download Our App</h4>
+              <h4 className="text-[10px] uppercase font-mono tracking-widest text-primary">Follow Our Journey</h4>
               <div className="flex flex-wrap gap-3">
-                <a href="#" className="flex items-center gap-2 px-3 py-2 border border-border/80 hover:border-primary/50 transition-colors bg-zinc-950 text-[10px] font-mono uppercase tracking-wider">
-                  <Smartphone className="h-4 w-4 text-primary" /> App Store
-                </a>
-                <a href="#" className="flex items-center gap-2 px-3 py-2 border border-border/80 hover:border-primary/50 transition-colors bg-zinc-950 text-[10px] font-mono uppercase tracking-wider">
-                  <AppWindow className="h-4 w-4 text-primary" /> Google Play
+                <a 
+                  href="https://www.instagram.com/mancro_watch/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 px-4 py-2 border border-border/80 hover:border-primary/50 transition-colors bg-zinc-950 text-[10px] font-mono uppercase tracking-wider"
+                >
+                  <Instagram className="h-4 w-4 text-primary" /> Instagram
                 </a>
               </div>
             </div>
