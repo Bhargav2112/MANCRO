@@ -107,13 +107,15 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/5 text-primary">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/5 text-primary shrink-0">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Geneva Office</p>
-                      <span className="text-sm font-medium">{settings.store_address || 'Rue du Rhône 42, 1204 Geneva'}</span>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Atelier Location</p>
+                      <span className="text-sm font-medium whitespace-pre-line">
+                        {settings.store_address || '173, AR MALL, MOTA VARACHHA, SURAT\n173 AR MALL OPPSUITE PANVEL POINT , MOTA VARACHHA, Surat, Gujarat 394101'}
+                      </span>
                     </div>
                   </div>
                 </div>

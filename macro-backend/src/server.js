@@ -910,7 +910,7 @@ async function seedStoreSettings() {
       store_email: "atelier@mancro.com",
       store_phone: "+1 (800) 555-0190",
       whatsapp_number: "+18005550190",
-      store_address: "Rue du Rhône 42, 1204 Geneva",
+      store_address: "173, AR MALL, MOTA VARACHHA, SURAT\n173 AR MALL OPPSUITE PANVEL POINT , MOTA VARACHHA, Surat, Gujarat 394101",
       about_text: "MANCRO was created for clients who understand that luxury is not volume—it is restraint, proportion, silence, and precision. Every reference is designed to feel inevitable on the wrist.",
       logo_url: "https://media.base44.com/images/public/user_6943e9bbf2f0c149cfad4c09/0cf447929_MANCROlogo.jpg",
       about_title: "Creating watches that blend innovation",
