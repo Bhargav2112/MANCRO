@@ -146,7 +146,21 @@ export default function Contact() {
                   <p className="mt-4 max-w-sm text-sm leading-7 text-muted-foreground">
                     Your transmission has been securely routed to our curators. An horology specialist will reply within one business day.
                   </p>
-                  <Button onClick={() => setSubmitted(false)} className="mt-10 rounded-full px-8">
+                  <Button 
+                    onClick={() => {
+                      setForm({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        subject: initialWatchName ? `Inquiry for ${initialWatchName}` : 'Viewing Inquiry',
+                        message: '',
+                        watchId: initialWatchId,
+                        watchName: initialWatchName
+                      });
+                      setSubmitted(false);
+                    }} 
+                    className="mt-10 rounded-full px-8"
+                  >
                     Send Another Inquiry
                   </Button>
                 </div>
