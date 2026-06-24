@@ -71,8 +71,6 @@ function HeroSlider({ slides }) {
         ))}
       </div>
 
-      <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent z-10" />
-
       {/* Content Slider */}
       <div className="relative mx-auto w-full max-w-7xl py-12 z-20">
         <div className="max-w-2xl">
@@ -239,7 +237,6 @@ export default function Home() {
       ) : (
         <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.06),transparent_50%),linear-gradient(to_bottom,black,#070707)]" />
-          <div className="absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary/20 to-transparent" />
           
           <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.1fr_0.9fr] py-12">
             <motion.div 
