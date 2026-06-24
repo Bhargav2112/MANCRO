@@ -66,30 +66,23 @@ export default function SiteHeader() {
             <span className="font-display text-2xl tracking-[0.25em] text-foreground font-semibold">MANCRO</span>
           </Link>
 
-          {/* Search Box (Center) */}
-          <form onSubmit={handleSearchSubmit} className="hidden md:flex flex-1 max-w-lg items-center bg-zinc-950 border border-border/60 hover:border-primary/50 transition-colors rounded-none p-1 font-mono text-xs">
-            <select
-              value={searchCategory}
-              onChange={(e) => setSearchCategory(e.target.value)}
-              className="bg-transparent text-muted-foreground/80 focus:outline-none border-r border-border/60 px-4 py-2 uppercase tracking-wider cursor-pointer"
-            >
-              <option value="All" className="bg-zinc-950 text-foreground">All Categories</option>
-              <option value="Heritage" className="bg-zinc-950 text-foreground">Heritage</option>
-              <option value="Sport" className="bg-zinc-950 text-foreground">Sport</option>
-              <option value="Dress" className="bg-zinc-950 text-foreground">Dress</option>
-              <option value="Skeleton" className="bg-zinc-950 text-foreground">Skeleton</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Search timepieces..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground/50 focus:outline-none px-4 py-2 font-sans"
-            />
-            <button type="submit" className="p-2 text-muted-foreground hover:text-primary transition-colors" aria-label="Search button">
-              <Search className="h-4 w-4" />
-            </button>
-          </form>
+          {/* Desktop Navigation (Center) */}
+          <nav className="hidden md:flex items-center justify-center gap-10 flex-1">
+            {links.map(([label, to]) => (
+              <NavLink 
+                key={to} 
+                to={to} 
+                className={({ isActive }) => `relative text-xs uppercase tracking-[0.25em] py-1 transition-colors ${isActive ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground'} group`}
+              >
+                {({ isActive }) => (
+                  <>
+                    {label}
+                    <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-primary transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </nav>
 
           {/* Hotline / Contact (Right) */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
@@ -111,25 +104,7 @@ export default function SiteHeader() {
         </div>
       </div>
 
-      {/* 3. Sub-Navbar (For desktop navigation) */}
-      <div className="hidden md:block bg-zinc-950/80 border-b border-border/20 py-3 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-12 flex items-center justify-center gap-12">
-          {links.map(([label, to]) => (
-            <NavLink 
-              key={to} 
-              to={to} 
-              className={({ isActive }) => `relative text-xs uppercase tracking-[0.25em] py-1 transition-colors ${isActive ? 'text-primary font-medium' : 'text-muted-foreground hover:text-foreground'} group`}
-            >
-              {({ isActive }) => (
-                <>
-                  {label}
-                  <span className={`absolute -bottom-1 left-0 h-[1.5px] bg-primary transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                </>
-              )}
-            </NavLink>
-          ))}
-        </div>
-      </div>
+
 
       {/* Mobile Menu Drawer */}
       {open && (
