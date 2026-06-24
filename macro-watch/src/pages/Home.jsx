@@ -107,17 +107,7 @@ function HeroSlider({ slides }) {
       </div>
 
       {/* Slider Controls */}
-      <div className="absolute bottom-10 left-6 right-6 mx-auto max-w-7xl flex items-center justify-between z-30">
-        <div className="flex gap-3">
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrent(idx)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === current ? 'bg-primary w-8' : 'bg-muted-foreground/30 hover:bg-muted-foreground'}`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
+      <div className="absolute bottom-10 left-6 right-6 mx-auto max-w-7xl flex items-center justify-end z-30">
         <div className="flex gap-4">
           <button 
             onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
